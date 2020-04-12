@@ -22,7 +22,7 @@ class MyCog(commands.Cog):
         categoryitsin = int(698826755397648414) # here you put the category the message is already in (waiting for staff)
         categorytomoveto = int(698826780798222386) # here you put the category you want the channel to get moved to (waiting for client)
         if discord.utils.get(user.roles, name="staff"): # checks if a staff member sent that message (do not give staff rank to a bot)
-            if message.TextChannel.category_id == categoryitsin: # here it checks if the channel message was sent in the category (waiting for staff)
+            if message.channel.category_id == categoryitsin: # here it checks if the channel message was sent in the category (waiting for staff)
                 channel.edit(category=categorytomoveto) # here it moves it to (waiting for client)
                 
             
